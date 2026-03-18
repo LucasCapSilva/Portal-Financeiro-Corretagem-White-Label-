@@ -175,7 +175,7 @@ const Portfolio = () => {
               {portfolio.map((item) => {
                 const isPositive = item.gainLoss >= 0;
                 return (
-                  <tr key={item.symbol} className="border-b border-gray-100 dark:border-gray-800 last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                  <tr key={item.symbol} className="border-b border-gray-100 dark:border-gray-800/50 last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors">
                     <td className="py-4 pl-2 font-bold text-gray-900 dark:text-white">{item.symbol}</td>
                     <td className="py-4 text-right text-gray-600 dark:text-gray-300">{item.quantity}</td>
                     <td className="py-4 text-right text-gray-600 dark:text-gray-300">

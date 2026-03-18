@@ -51,6 +51,16 @@ Desenvolver um ecossistema robusto para corretoras e fintechs que necessitam de 
 - **Recharts**: Biblioteca de gráficos composável e responsiva.
 - **Axios**: Cliente HTTP para consumo de APIs.
 
+## 🎨 Sistema de Cores e Acessibilidade (WCAG 2.1)
+
+A plataforma foi projetada seguindo as diretrizes de acessibilidade **WCAG 2.1**, garantindo um contraste adequado em todos os elementos visuais para ambos os modos (Claro e Escuro).
+
+- **Contraste Mínimo**: Todos os textos normais possuem taxa de contraste mínima de 4.5:1, e textos grandes 3:1.
+- **Transições Suaves**: Mudanças de tema (Light/Dark) e estados interativos (Hover/Focus) utilizam animações CSS de transição suaves.
+- **Paletas Dinâmicas**: Utilização da função `currentColor` para sincronizar elementos gráficos (como eixos de charts e ícones) com o tema atual.
+- **Glassmorphism Acessível**: Ajustes nos níveis de opacidade de fundos e bordas (ex: `dark:bg-gray-800/30` e `dark:border-gray-800/50`) para manter a legibilidade de textos e tabelas sem perder a estética "glass".
+- **Feedback Visual**: Indicadores de alta (Verde) e baixa (Vermelho) ajustados em modo escuro para `text-green-400` / `text-red-400` sobre fundos com opacidade `bg-green-900/40` e `bg-red-900/40`, otimizando a leitura.
+
 ## 🚀 Como Executar
 
 ### Pré-requisitos
@@ -99,13 +109,6 @@ src/
 └── ...
 ```
 
-## 🧪 Próximos Passos & Melhorias
 
-- [ ] **Autenticação Real**: Integração com Auth0, Firebase ou Backend próprio.
-- [ ] **Backend**: Implementação de uma API Node.js/NestJS para persistência real de dados.
-- [ ] **WebSockets**: Cotações via socket para atualização em milissegundos.
-- [ ] **Testes**: Cobertura de testes unitários (Vitest) e E2E (Cypress).
-
----
 
 Desenvolvido com 💙 por [Lucas Capelotto](https://github.com/LucasCapelotto)

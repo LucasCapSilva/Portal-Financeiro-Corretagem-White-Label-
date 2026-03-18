@@ -31,7 +31,7 @@ export const TopMovers = ({ stocks }: TopMoversProps) => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="flex items-center justify-between p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group cursor-pointer"
+              className="flex items-center justify-between p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors group cursor-pointer"
             >
               <div>
                 <div className="font-bold text-gray-900 dark:text-white group-hover:text-brand-500 transition-colors">

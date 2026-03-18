@@ -45,7 +45,7 @@ export const MarketOverviewChart = () => {
                 "px-3 py-1 text-xs font-medium rounded-md transition-all",
                 range === r 
                   ? "bg-white dark:bg-gray-700 text-brand-600 dark:text-brand-400 shadow-sm" 
-                  : "text-gray-500 hover:text-gray-900 dark:hover:text-gray-200"
+                  : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
               )}
             >
               {r}
@@ -73,26 +73,27 @@ export const MarketOverviewChart = () => {
                 dataKey="time" 
                 axisLine={false} 
                 tickLine={false} 
-                tick={{ fill: 'var(--color-secondary-500)', fontSize: 12 }} 
+                tick={{ fill: 'currentColor', fontSize: 12, opacity: 0.6 }} 
                 dy={10}
               />
               <YAxis 
                 domain={['auto', 'auto']} 
                 axisLine={false} 
                 tickLine={false} 
-                tick={{ fill: 'var(--color-secondary-500)', fontSize: 12 }} 
+                tick={{ fill: 'currentColor', fontSize: 12, opacity: 0.6 }} 
                 tickFormatter={(value) => value.toLocaleString('pt-BR', { notation: 'compact' })}
               />
               <Tooltip 
                 contentStyle={{ 
-                  backgroundColor: 'rgba(255, 255, 255, 0.8)', 
+                  backgroundColor: 'var(--bg-card)', 
                   borderColor: 'var(--color-secondary-200)',
                   backdropFilter: 'blur(8px)',
                   borderRadius: '12px',
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                  color: 'currentColor'
                 }}
-                itemStyle={{ color: 'var(--color-brand-600)' }}
-                labelStyle={{ color: 'var(--color-secondary-600)', marginBottom: '4px' }}
+                itemStyle={{ color: 'rgb(var(--color-brand-500))', fontWeight: 'bold' }}
+                labelStyle={{ color: 'currentColor', opacity: 0.7, marginBottom: '4px' }}
                 formatter={(value: any) => [Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }), 'Valor']}
               />
               <Area 

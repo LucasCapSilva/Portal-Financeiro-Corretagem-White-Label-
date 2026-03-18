@@ -30,7 +30,7 @@ export const Sidebar = () => {
     <motion.aside 
       initial={{ width: 240 }}
       animate={{ width: collapsed ? 80 : 240 }}
-      className="h-screen bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 flex flex-col z-20 sticky top-0"
+      className="h-screen bg-white dark:bg-[#111827] border-r border-gray-200 dark:border-gray-800 flex flex-col z-20 sticky top-0"
     >
       <div className="p-4 flex items-center justify-between h-16 border-b border-gray-200 dark:border-gray-800">
         <AnimatePresence mode="wait">
@@ -47,7 +47,7 @@ export const Sidebar = () => {
         </AnimatePresence>
         <button 
           onClick={() => setCollapsed(!collapsed)}
-          className="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
+          className="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 transition-colors"
         >
           {collapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
         </button>
@@ -61,8 +61,8 @@ export const Sidebar = () => {
             className={({ isActive }) => clsx(
               "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group relative",
               isActive 
-                ? "bg-brand-50 dark:bg-brand-900/20 text-brand-600 dark:text-brand-400" 
-                : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white"
+                ? "bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-300" 
+                : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white"
             )}
           >
             <item.icon size={20} className="min-w-[20px]" />

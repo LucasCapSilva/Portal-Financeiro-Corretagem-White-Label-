@@ -31,6 +31,14 @@
 }
 
 @layer base {
+  :root {
+    --bg-card: rgba(255, 255, 255, 0.8);
+  }
+  
+  .dark {
+    --bg-card: rgba(31, 41, 55, 0.9);
+  }
+
   body {
     @apply bg-gray-50 text-gray-900 dark:bg-[#0B0F19] dark:text-gray-100 font-sans;
   }

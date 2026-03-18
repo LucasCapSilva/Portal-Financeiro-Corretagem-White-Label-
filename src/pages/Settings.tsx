@@ -72,7 +72,7 @@ const Settings = () => {
                   <span>Upload Logo</span>
                   <input type="file" accept="image/*" className="hidden" onChange={handleLogoUpload} />
                 </label>
-                <span className="text-xs text-gray-500">Recomendado: PNG transparente</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400">Recomendado: PNG transparente</span>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ const Settings = () => {
                       );
                    })}
                 </div>
-                <p className="text-xs text-gray-500 mt-3">
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-3">
                    Selecione uma das paletas de cores pré-definidas para alterar a identidade visual de toda a aplicação instantaneamente.
                 </p>
              </div>

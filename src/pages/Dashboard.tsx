@@ -49,7 +49,7 @@ const Dashboard = () => {
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Dashboard</h1>
           <p className="text-gray-500 dark:text-gray-400">Visão geral do mercado hoje</p>
         </div>
-        <div className="text-sm text-gray-500 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
+        <div className="text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
           Última atualização: {new Date().toLocaleTimeString()}
         </div>
       </div>

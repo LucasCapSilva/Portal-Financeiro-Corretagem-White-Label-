@@ -23,8 +23,8 @@ export const IndexCard = ({ index }: IndexCardProps) => {
         <span className={clsx(
           "flex items-center text-xs font-bold px-2 py-1 rounded-full",
           isPositive 
-            ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" 
-            : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+            ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400" 
+            : "bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400"
         )}>
           {isPositive ? <ArrowUpRight size={12} className="mr-1" /> : <ArrowDownRight size={12} className="mr-1" />}
           {index.changePercent.toFixed(2)}%

@@ -97,7 +97,7 @@ const Market = () => {
               placeholder="Buscar por símbolo ou nome..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-brand-500 transition-all outline-none"
+              className="w-full pl-10 pr-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-brand-500 transition-all outline-none"
             />
           </div>
           <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
@@ -138,7 +138,7 @@ const Market = () => {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0 }}
-                      className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                      className="border-b border-gray-100 dark:border-gray-800/50 hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors"
                     >
                       <td className="py-4 px-4 font-bold text-gray-900 dark:text-white">{stock.symbol}</td>
                       <td className="py-4 px-4 text-gray-600 dark:text-gray-300">{stock.name}</td>
@@ -148,7 +148,7 @@ const Market = () => {
                       <td className="py-4 px-4 text-right">
                         <span className={clsx(
                           "inline-flex items-center px-2 py-1 rounded-full text-xs font-bold",
-                          isPositive ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                          isPositive ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400" : "bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400"
                         )}>
                           {isPositive ? '+' : ''}{stock.changePercent.toFixed(2)}%
                         </span>

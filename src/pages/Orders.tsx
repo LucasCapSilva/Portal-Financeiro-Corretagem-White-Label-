@@ -107,7 +107,7 @@ const Orders = () => {
               <select 
                 value={selectedStock}
                 onChange={(e) => handleStockChange(e.target.value)}
-                className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none"
+                className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-brand-500 outline-none"
               >
                 {stocks.map(stock => (
                   <option key={stock.symbol} value={stock.symbol}>{stock.symbol} - {stock.name}</option>
@@ -150,7 +150,7 @@ const Orders = () => {
                   value={quantity}
                   onChange={(e) => setQuantity(Number(e.target.value))}
                   min="1"
-                  className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none"
+                  className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-brand-500 outline-none"
                 />
               </div>
               <div>
@@ -160,7 +160,7 @@ const Orders = () => {
                   value={price}
                   onChange={(e) => setPrice(Number(e.target.value))}
                   step="0.01"
-                  className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none"
+                  className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-brand-500 outline-none"
                 />
               </div>
             </div>
@@ -214,7 +214,7 @@ const Orders = () => {
                 {orders.map((order) => {
                    const isBuy = order.type === 'BUY';
                    return (
-                    <tr key={order.id} className="border-b border-gray-100 dark:border-gray-800 last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    <tr key={order.id} className="border-b border-gray-100 dark:border-gray-800/50 last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors">
                       <td className="py-4 pl-2 text-gray-600 dark:text-gray-300 text-sm">
                         {new Date(order.date).toLocaleDateString()} <span className="text-xs text-gray-400">{new Date(order.date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
                       </td>
@@ -222,7 +222,7 @@ const Orders = () => {
                       <td className="py-4">
                         <span className={clsx(
                           "px-2 py-1 rounded text-xs font-bold",
-                          isBuy ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                          isBuy ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400" : "bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400"
                         )}>
                           {isBuy ? 'COMPRA' : 'VENDA'}
                         </span>
