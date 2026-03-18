@@ -68,7 +68,7 @@ export const MarketOverviewChart = () => {
                   <stop offset="95%" stopColor="rgb(var(--color-brand-500))" stopOpacity={0}/>
                 </linearGradient>
               </defs>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--color-secondary-200)" opacity={0.1} />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgb(var(--color-secondary-200))" opacity={0.1} />
               <XAxis 
                 dataKey="time" 
                 axisLine={false} 
@@ -86,7 +86,7 @@ export const MarketOverviewChart = () => {
               <Tooltip 
                 contentStyle={{ 
                   backgroundColor: 'var(--bg-card)', 
-                  borderColor: 'var(--color-secondary-200)',
+                  borderColor: 'rgb(var(--color-secondary-200))',
                   backdropFilter: 'blur(8px)',
                   borderRadius: '12px',
                   boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',

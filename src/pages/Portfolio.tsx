@@ -141,12 +141,16 @@ const Portfolio = () => {
                 <RechartsTooltip 
                    formatter={(value: any) => Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                    contentStyle={{ 
-                     backgroundColor: 'var(--bg)', 
-                     borderColor: 'var(--border)', 
-                     borderRadius: '8px' 
+                     backgroundColor: 'var(--bg-card)', 
+                     borderColor: 'rgb(var(--color-secondary-200))',
+                     backdropFilter: 'blur(8px)',
+                     borderRadius: '12px',
+                     boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                     color: 'currentColor'
                    }}
+                   itemStyle={{ fontWeight: 'bold' }}
                 />
-                <Legend />
+                <Legend formatter={(value) => <span className="text-gray-700 dark:text-gray-300 font-medium">{value}</span>} />
               </PieChart>
             </ResponsiveContainer>
           </div>
