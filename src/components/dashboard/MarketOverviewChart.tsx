@@ -32,17 +32,17 @@ export const MarketOverviewChart = () => {
     <motion.div 
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="glass-card p-6 col-span-2 lg:col-span-3 h-[400px] flex flex-col"
+      className="glass-card p-4 sm:p-5 md:p-6 min-h-[320px] sm:min-h-[360px] md:min-h-[400px] flex flex-col"
     >
-      <div className="flex justify-between items-center mb-6">
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white">Visão Geral do Mercado (IBOV)</h3>
-        <div className="flex bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-4 sm:mb-6">
+        <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">Visão Geral do Mercado (IBOV)</h3>
+        <div className="flex flex-wrap bg-gray-100 dark:bg-gray-800 rounded-lg p-1 w-fit">
           {ranges.map((r) => (
             <button
               key={r}
               onClick={() => setRange(r)}
               className={clsx(
-                "px-3 py-1 text-xs font-medium rounded-md transition-all",
+                "px-2.5 sm:px-3 py-1 text-xs font-medium rounded-md transition-all",
                 range === r 
                   ? "bg-white dark:bg-gray-700 text-brand-600 dark:text-brand-400 shadow-sm" 
                   : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
@@ -94,7 +94,10 @@ export const MarketOverviewChart = () => {
                 }}
                 itemStyle={{ color: 'rgb(var(--color-brand-500))', fontWeight: 'bold' }}
                 labelStyle={{ color: 'currentColor', opacity: 0.7, marginBottom: '4px' }}
-                formatter={(value: any) => [Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }), 'Valor']}
+                formatter={(value: unknown) => {
+                  const parsedValue = Array.isArray(value) ? value[0] : value;
+                  return [Number(parsedValue ?? 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }), 'Valor'];
+                }}
               />
               <Area 
                 type="monotone" 

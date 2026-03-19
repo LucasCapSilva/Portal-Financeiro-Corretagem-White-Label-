@@ -45,7 +45,7 @@ const Orders = () => {
     };
 
     fetchData();
-  }, []);
+  }, [initialTicker]);
 
   const handleStockChange = (symbol: string) => {
     setSelectedStock(symbol);
@@ -142,7 +142,7 @@ const Orders = () => {
               </button>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Quantidade</label>
                 <input 
@@ -198,7 +198,7 @@ const Orders = () => {
           </div>
 
           <div className="overflow-x-auto flex-1">
-            <table className="w-full">
+            <table className="w-full min-w-[720px]">
               <thead>
                 <tr className="border-b border-gray-200 dark:border-gray-700 text-left text-sm font-medium text-gray-500 dark:text-gray-400">
                   <th className="pb-3 pl-2">Data</th>

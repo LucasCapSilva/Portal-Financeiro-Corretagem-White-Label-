@@ -118,7 +118,7 @@ const Portfolio = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
-          className="glass-card p-6 h-[400px] flex flex-col"
+          className="glass-card p-4 sm:p-5 md:p-6 min-h-[320px] sm:min-h-[360px] md:min-h-[400px] flex flex-col"
         >
           <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Alocação de Ativos</h3>
           <div className="flex-1 min-h-0">
@@ -139,7 +139,7 @@ const Portfolio = () => {
                   ))}
                 </Pie>
                 <RechartsTooltip 
-                   formatter={(value: any) => Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                   formatter={(value: unknown) => Number((Array.isArray(value) ? value[0] : value) ?? 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                    contentStyle={{ 
                      backgroundColor: 'var(--bg-card)', 
                      borderColor: 'rgb(var(--color-secondary-200))',
@@ -161,10 +161,10 @@ const Portfolio = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
-          className="glass-card p-6 lg:col-span-2 overflow-x-auto"
+          className="glass-card p-4 sm:p-5 md:p-6 lg:col-span-2 overflow-x-auto"
         >
           <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Seus Ativos</h3>
-          <table className="w-full">
+          <table className="w-full min-w-[760px]">
             <thead>
               <tr className="border-b border-gray-200 dark:border-gray-700 text-left text-sm font-medium text-gray-500 dark:text-gray-400">
                 <th className="pb-3 pl-2">Ativo</th>

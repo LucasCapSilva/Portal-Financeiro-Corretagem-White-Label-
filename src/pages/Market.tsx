@@ -89,8 +89,8 @@ const Market = () => {
       </div>
 
       <div className="glass-card p-4">
-        <div className="flex gap-4 mb-6">
-          <div className="relative flex-1 max-w-md">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
+          <div className="relative flex-1 sm:max-w-md">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
             <input
               type="text"
@@ -100,14 +100,14 @@ const Market = () => {
               className="w-full pl-10 pr-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-brand-500 transition-all outline-none"
             />
           </div>
-          <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <button className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors sm:w-auto w-full">
             <Filter size={18} />
             <span>Filtros</span>
           </button>
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full">
+          <table className="w-full min-w-[760px]">
             <thead>
               <tr className="border-b border-gray-200 dark:border-gray-700">
                 <th className="text-left py-3 px-4 font-medium text-gray-500 dark:text-gray-400 cursor-pointer hover:text-brand-500 transition-colors" onClick={() => handleSort('symbol')}>

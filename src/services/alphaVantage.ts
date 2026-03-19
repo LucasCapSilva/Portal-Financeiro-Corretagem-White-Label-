@@ -8,7 +8,7 @@ const BASE_URL = 'https://www.alphavantage.co/query';
 let hasLoggedWarning = false;
 
 // Simple in-memory cache to prevent hitting rate limits too fast
-const cache: Record<string, { data: any; timestamp: number }> = {};
+const cache: Record<string, { data: unknown; timestamp: number }> = {};
 const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
 
 export const AlphaVantageService = {
@@ -26,7 +26,7 @@ export const AlphaVantageService = {
 
     const cacheKey = `quote_${symbol}`;
     if (cache[cacheKey] && Date.now() - cache[cacheKey].timestamp < CACHE_DURATION) {
-      return cache[cacheKey].data;
+      return cache[cacheKey].data as Stock;
     }
 
     try {
@@ -67,7 +67,7 @@ export const AlphaVantageService = {
 
     const cacheKey = `daily_${symbol}`;
     if (cache[cacheKey] && Date.now() - cache[cacheKey].timestamp < CACHE_DURATION) {
-      return cache[cacheKey].data;
+      return cache[cacheKey].data as ChartDataPoint[];
     }
 
     try {
@@ -99,7 +99,7 @@ export const AlphaVantageService = {
     }
   },
 
-  async searchSymbol(keywords: string): Promise<any> {
+  async searchSymbol(keywords: string): Promise<SearchEndpointResponse['bestMatches'] | undefined> {
     if (!this.isEnabled()) return undefined;
     
     try {

@@ -62,11 +62,11 @@ const Dashboard = () => {
       </div>
 
       {/* Main Chart & Top Movers */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[500px]">
-        <div className="lg:col-span-2 h-full">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 min-h-[320px] md:min-h-[380px]">
           <MarketOverviewChart />
         </div>
-        <div className="h-full">
+        <div className="min-h-[320px]">
           <TopMovers stocks={stocks} />
         </div>
       </div>
