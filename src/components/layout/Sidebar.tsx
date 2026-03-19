@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+  House,
+  UserRound,
   LayoutDashboard, 
   LineChart, 
   Wallet, 
@@ -15,7 +17,9 @@ import { useThemeStore } from '../../store/useThemeStore';
 import clsx from 'clsx';
 
 const menuItems = [
-  { icon: LayoutDashboard, label: 'Dashboard', path: '/' },
+  { icon: House, label: 'Home', path: '/' },
+  { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
+  { icon: UserRound, label: 'Sobre', path: '/about' },
   { icon: LineChart, label: 'Ativos', path: '/market' },
   { icon: Wallet, label: 'Carteira', path: '/portfolio' },
   { icon: ArrowLeftRight, label: 'Ordens', path: '/orders' },
