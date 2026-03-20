@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, BarChart3, Building2, CalendarCheck2, PhoneCall, ShieldCheck, UserCheck } from 'lucide-react';
+import { ArrowRight, BarChart3, Building2, CalendarCheck2, ShieldCheck, TrendingUp, UserCheck } from 'lucide-react';
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { Link } from 'react-router-dom';
 
@@ -89,7 +89,7 @@ const Home = () => {
                 to="/about"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 px-5 py-3 font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
               >
-                Conhecer especialista
+                Conhecer arquitetura
               </Link>
             </div>
           </motion.div>
@@ -179,15 +179,15 @@ const Home = () => {
               Experiência intuitiva para investidores e assessores.
             </li>
             <li className="flex items-start gap-3">
-              <PhoneCall className="mt-0.5 text-brand-500" size={18} />
-              Suporte consultivo para evolução contínua da operação.
+              <TrendingUp className="mt-0.5 text-brand-500" size={18} />
+              Evolução contínua da operação com dados e indicadores de performance.
             </li>
           </ul>
           <Link
             to="/about"
             className="inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gray-800 dark:bg-brand-600 dark:hover:bg-brand-700"
           >
-            Falar com especialista
+            Ver detalhes técnicos
           </Link>
         </motion.article>
       </section>
@@ -196,10 +196,10 @@ const Home = () => {
         <div className="flex flex-col gap-4 text-sm text-gray-600 dark:text-gray-300 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="font-semibold text-gray-900 dark:text-white">Portal Financeiro White Label</p>
-            <p>contato@portalfinanceiro.com.br · +55 (11) 4000-2299</p>
+            <p>Plataforma demonstrativa para apresentação de soluções de corretagem digital.</p>
           </div>
           <div className="text-xs text-gray-500 dark:text-gray-400">
-            Av. Brigadeiro Faria Lima, 3477 · São Paulo, SP
+            Arquitetura moderna para escala, segurança e personalização white label.
           </div>
         </div>
       </footer>
